@@ -1,5 +1,5 @@
 {
-  "default_provider": "anthropic",
+  "default_provider": "gemini",
   "max_steps": 20,
   "enable_lakeview": true,
   "model_providers": {
@@ -30,10 +30,19 @@
       "top_p": 1,
       "top_k": 0,
       "max_retries": 10
+    },
+    "gemini": {
+      "api_key": "your_google_api_key",
+      "model": "gemini-2.5-flash",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "top_p": 1.0,
+      "top_k": 40,
+      "max_retries": 10
     }
   },
   "lakeview_config": {
-    "model_provider": "anthropic",
-    "model_name": "claude-sonnet-4-20250514"
+    "model_provider": "gemini",
+    "model_name": "gemini-2.5-flash"
   }
 }
